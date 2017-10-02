@@ -14,26 +14,32 @@
         android:src="@mipmap/ic_launcher"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+     
+    <android.support.constraint.Barrier
+        android:id="@+id/image_barrier"
+        android:layout_width="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="word_image"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/miwok_text_view"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:layout_marginLeft="16dp"
         app:layout_constraintBottom_toTopOf="@+id/default_text_view"
-        app:layout_constraintLeft_toRightOf="@+id/word_image"
-        app:layout_constraintTop_toTopOf="@+id/word_image"
+        app:layout_constraintLeft_toRightOf="@+id/image_barrier"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="lutti" />
 
     <TextView
         android:id="@+id/default_text_view"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/word_image"
-        app:layout_constraintLeft_toRightOf="@+id/word_image"
+        app:layout_constraintLeft_toRightOf="@+id/image_barrier"
         app:layout_constraintTop_toBottomOf="@+id/miwok_text_view"
         tools:text="one" />
 </android.support.constraint.ConstraintLayout>
