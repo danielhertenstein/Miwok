@@ -61,6 +61,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
         defaultTextView.setText(currentWord.getDefaultTranslation());
         defaultTextView.setBackgroundColor(color);
 
+        // Find the ImageView in the list_item.xml for the play icon
+        ImageView icon = listItemView.findViewById(R.id.play_icon);
+        icon.setBackgroundColor(color);
+
         return listItemView;
     }
 }
